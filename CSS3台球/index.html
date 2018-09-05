@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<style>
+ul,ol{
+	padding:0;
+	list-style:none;	
+}
+
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dt,dd{
+			margin:0;
+}
+div{
+	position:relative;
+	width:500px;
+	height:300px;
+	margin:50px auto;
+	border:3px solid black;
+	border-radius:10px;
+	background-color:greenyellow;
+}
+li{
+	position:absolute;
+}
+li+li{
+	
+	width:30px;
+	height:30px;
+	top:50%;
+	border-radius:50%;
+}
+li:nth-child(2n-1){
+	background-color:black;
+}
+.white{
+	background-color:white;
+	animation:behit1 3s 3s forwards;
+}
+.black{
+	top:48%;
+	left:50%;
+	animation:behit 3s 3.5s forwards;
+
+}
+.gank{
+	top:54%;
+	left:-252px;
+	width:250px;
+	height:5px;
+	animation:impact 3s;
+}
+@keyframes impact{
+	40%{top:54%;left:-252px;}
+	95%{top:54%;left:-400px;}
+	100%{top:54%;left:-252px;}
+}
+@keyframes behit1{
+	0%{top:50%;left:0;}
+	15%{top:50%;left:221px;}
+	100%{top:50%;left:25%;}
+}
+@keyframes behit{
+	0%{top:48%;left:50%;}
+	30%{top:1%;left:94%;}
+	100%{top:50%;left:94%;}
+}
+</style>
+</head>
+	<body>
+		<div>
+			<ul>
+				<li class="gank"></li>
+				<li class="white"></li>
+				<li class="black"></li>
+			</ul>
+		</div>
+	</body>
+</html>
